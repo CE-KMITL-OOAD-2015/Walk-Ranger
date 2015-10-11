@@ -7,15 +7,10 @@ import android.view.MenuItem;
 import com.facebook.FacebookSdk;
 public class MainActivity extends AppCompatActivity {
     @Override
-    protected void onResume() {
-        super.onResume();
-
-        // Logs 'install' and 'app activate' App Events.
-        AppEventsLogger.activateApp(this);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        // Initialize the SDK before executing any other operations,
+        // especially, if you're using Facebook UI elements.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }

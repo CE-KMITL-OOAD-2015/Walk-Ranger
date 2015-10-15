@@ -1,4 +1,6 @@
 package com.example.nattachai.walkingranger;
+import com.facebook.Profile;
+import com.facebook.login.widget.ProfilePictureView;
 
 /**
  * Created by Nattachai on 10/15/2015.
@@ -7,6 +9,7 @@ public class User {
     private String userName;
     private int step;
     private String fBcode;
+    private Profile profile;
     public User(){
 
     }

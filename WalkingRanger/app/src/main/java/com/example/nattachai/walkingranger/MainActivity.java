@@ -73,11 +73,10 @@ public class MainActivity extends AppCompatActivity {
         mainMenu.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View V){
-
+                startActivity(new Intent(getApplicationContext(), MainPageActivity.class));
             }
         });
     }
-
     private void updateUI() {
         boolean loggedIn = AccessToken.getCurrentAccessToken() != null;
         Profile profile = Profile.getCurrentProfile();

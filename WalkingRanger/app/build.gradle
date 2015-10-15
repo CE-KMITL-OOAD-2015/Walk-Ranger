@@ -23,4 +23,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.facebook.android:facebook-android-sdk:4.7.0'
+    compile files('libs/java-json.jar')
+    compile files('libs/commons-cli-1.2.jar')
+    compile files('libs/httpcore-4.4.3.jar')
+    compile files('libs/httpcore-ab-4.4.3.jar')
+    compile files('libs/httpcore-nio-4.4.3.jar')
+    compile files('libs/httpcore-4.2.3.jar')
 }

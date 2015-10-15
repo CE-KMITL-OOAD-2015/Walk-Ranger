@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.support.
+import android.widget.Button;
 
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -24,6 +24,8 @@ import com.facebook.CallbackManager;
 import com.facebook.ProfileTracker;
 import com.facebook.login.widget.ProfilePictureView;
 
+import org.w3c.dom.Text;
+
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     ProfileTracker profileTracker;
 //    private User user = new User(null,null);
     private TextView userName;
+    private Button mainMenu;
     private ProfilePictureView profilePicture;
 
     @Override
@@ -60,12 +63,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         userName = (TextView) findViewById(R.id.user_name);
         profilePicture = (ProfilePictureView) findViewById(R.id.profile_picture);
+        mainMenu = (Button) findViewById(R.id.main_menu);
         profileTracker = new ProfileTracker() {
             @Override
             protected void onCurrentProfileChanged(Profile profile, Profile profile1) {
                 updateUI();
             }
         };
+        mainMenu.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View V){
+
+            }
+        });
     }
 
     private void updateUI() {
@@ -76,11 +86,13 @@ public class MainActivity extends AppCompatActivity {
 //            user.setUserName(profile.getName());
             profilePicture.setProfileId(profile.getId());
             userName.setText(profile.getName());
+            mainMenu.setEnabled(true);
 //            Intent i = new Intent(this,Main_menu.class);
 //            startActivity(i);
         } else {
             profilePicture.setProfileId(null);
             userName.setText(null);
+            mainMenu.setEnabled(false);
         }
     }
     @Override

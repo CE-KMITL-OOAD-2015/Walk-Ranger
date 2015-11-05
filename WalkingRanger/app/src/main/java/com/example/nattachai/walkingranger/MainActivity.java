@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
-//        LoginManager.getInstance().logInWithPublishPermissions(
-//                this,
-//                Arrays.asList("publish_actions"));
+        LoginManager.getInstance().logInWithPublishPermissions(
+                this,
+                Arrays.asList("publish_actions", "bb"));
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {

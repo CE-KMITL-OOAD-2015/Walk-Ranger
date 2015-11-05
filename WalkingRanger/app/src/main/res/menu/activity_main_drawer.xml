@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+      <group android:checkableBehavior="none">
+          <item android:id="@+id/nav_home"
+              android:icon="@drawable/ic_home_black_24dp"
+              android:title="Home" />
+          <item android:id="@+id/nav_userpro"
+              android:icon="@drawable/ic_person_black_24dp"
+              android:title="User Profile" />
+          <item android:id="@+id/nav_group"
+              android:icon="@drawable/ic_group_black_24dp"
+              android:title="Group" />
+          <item android:id="@+id/nav_board"
+              android:icon="@drawable/ic_dvr_black_24dp"
+              android:title="Leaderboard" />
+          <item android:id="@+id/nav_scarvenger"
+              android:icon="@drawable/ic_map_black_24dp"
+              android:title="Scarvenger" />
+          <item android:id="@+id/nav_info"
+              android:icon="@drawable/ic_info_black_24dp"
+              android:title="Info" />
+          <item android:id="@+id/nav_logout"
+              android:icon="@drawable/logout_exit"
+              android:title="Logout" /> /
+      </group>
+    <!--  <item android:title="Menu">
+          <menu>
+                  <item android:id="@+id/nav_userpro"
+                      android:icon="@drawable/ic_person_black_24dp"
+                      android:title="User Profile" />
+                  <item android:id="@+id/nav_group"
+                      android:icon="@drawable/ic_group_black_24dp"
+                      android:title="Group" />
+                  <item android:id="@+id/nav_board"
+                      android:icon="@drawable/ic_dvr_black_24dp"
+                      android:title="Score Board" />
+                  <item android:id="@+id/nav_scarvenger"
+                      android:icon="@drawable/ic_map_black_24dp"
+                      android:title="Scarvenger" />
+                  <item android:id="@+id/nav_info"
+                      android:icon="@drawable/ic_info_black_24dp"
+                      android:title="Info" />
+                  <item android:id="@+id/nav_logout"
+                      android:icon="@drawable/ic_cancel_black_24dp"
+                      android:title="Logout" />
+              </menu>
+          </item>/-->
+      </menu>

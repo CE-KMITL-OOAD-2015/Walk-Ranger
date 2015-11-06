@@ -11,8 +11,6 @@ import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 
-
-
 public class EventFragment extends Fragment {
 
     @Override

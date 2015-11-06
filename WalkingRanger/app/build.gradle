@@ -30,5 +30,5 @@ dependencies {
     compile files('libs/httpcore-nio-4.4.3.jar')
     compile files('libs/httpcore-4.2.3.jar')
     compile 'com.android.support:design:23.0.1'
-    compile 'com.google.android.gms:play-services-plus:+'
+    compile 'com.google.android.gms:play-services-location:+'
 }

@@ -1,16 +1,28 @@
 package com.example.nattachai.walkingranger;
 
 
+import android.location.Location;
+import android.location.LocationListener;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
+<<<<<<< HEAD
+=======
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+
+>>>>>>> origin/test
 public class EventFragment extends Fragment {
 
     @Override
@@ -21,7 +33,52 @@ public class EventFragment extends Fragment {
         return v;
     }
 
-    public class SavedTabsListAdapter extends BaseExpandableListAdapter {
+    public class SavedTabsListAdapter extends BaseExpandableListAdapter implements
+            GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+        protected GoogleApiClient mGoogleApiClient;
+        protected Location mCurrentLocation;
+        protected LocationRequest mLocationRequest;
+        @Override
+        public void onLocationChanged(Location location) {
+            mCurrentLocation = location;
+            Toast.makeText(getActivity(), location.toString() + "", Toast.LENGTH_SHORT).show();
+        }
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+        }
+        @Override
+        public void onProviderEnabled(String provider) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+
+        }
+
+        @Override
+        public void onLocationChanged(Location location) {
+            mCurrentLocation = location;
+    //        mLastUpdateTime = DateFormat.getDateFormat(getActivity()).format(new Date());
+            Toast.makeText(getActivity(), location.toString() + "", Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onConnected(Bundle connectionHint) {
+
+        }
+
+        @Override
+        public void onConnectionFailed(ConnectionResult result) {
+            Log.i("LocationFragment", "Connection failed: ConnectionResult.getErrorCode() " + result.getErrorCode());
+        }
+
+        @Override
+        public void onConnectionSuspended(int cause) {
+            Log.i("LocationFragment", "Connection suspended");
+            mGoogleApiClient.connect();
+        }
 
         private String[] groups = { "  Event 1", "  Event 2", "  Event 3", "  Event 4" };
 

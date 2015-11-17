@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_Change"
+        android:orderInCategory="100"
+        android:title="Change leader"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Disband"
+        android:orderInCategory="100"
+        android:title="Disband"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_Kick"
+        android:orderInCategory="100"
+        android:title="Kick"
+        app:showAsAction="never" />
+</menu>

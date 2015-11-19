@@ -1,0 +1,63 @@
+<LinearLayout
+    android:background="#c4c4c4"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="32dp"
+    tools:context=".LaunActivity">
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        facebook:com_facebook_confirm_logout="false"
+        facebook:com_facebook_tooltip_mode="never_display"/>
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.facebook.login.widget.ProfilePictureView
+            android:layout_gravity="center"
+            android:id="@+id/profile_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            facebook:com_facebook_preset_size="normal"
+            ></com.facebook.login.widget.ProfilePictureView>
+
+        <ImageView
+            android:id="@+id/android"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/subtracted_circle3"
+            android:contentDescription="@null" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dp"
+        android:layout_marginBottom="15dp"
+        android:text="kkkkkk"
+        android:gravity="center"/>
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="#3b59b0"
+        android:id="@+id/main_menu"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Go"/>
+</LinearLayout>

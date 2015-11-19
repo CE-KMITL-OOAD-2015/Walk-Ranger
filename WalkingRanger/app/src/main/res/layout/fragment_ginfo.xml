@@ -1,0 +1,145 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nattachai.walkingranger.GinfoFragment">
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:background="#c4c4c4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:background="#777"
+            android:gravity="center"
+            android:id="@+id/ggname"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:layout_weight="0.1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:paddingTop="10dp"
+            android:paddingLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3">
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:textColor="#777"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:text="Group code"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="0.7"
+                    android:id="@+id/ggcode"
+
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingTop="5dp"
+                android:layout_below="@+id/l1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/linearLayout">
+                <TextView
+                    android:textColor="#777"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:id="@+id/lg"
+                    android:text="Leader group"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_weight="0.7"
+                    android:layout_below="@+id/lg"
+                    android:id="@+id/gmlea"
+                    android:textSize="15sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:textStyle="bold"
+            android:layout_weight="0.5"
+            android:textColor="#777"
+            android:text="Avg. step"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/gastep"
+            android:textSize="30sp"
+            android:layout_weight="0.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#777"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/ws"
+                    android:text="Weekly step"
+                    android:textSize="25sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="30dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/ws"
+                    android:id="@+id/gwstep"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#777"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/ms"
+                    android:text="Monthly step"
+                    android:textSize="25sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:paddingTop="30dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/ms"
+                    android:id="@+id/gmstep"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

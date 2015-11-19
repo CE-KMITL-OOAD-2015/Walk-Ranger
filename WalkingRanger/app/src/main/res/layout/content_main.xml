@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.nattachai.walkingranger.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:paddingTop="20dp">
+
+
+    <LinearLayout
+        android:id="@+id/w1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/progressBarm"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_horizontal" />
+
+            <TextView
+                android:id="@+id/count3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+
+                android:textSize="25dp" />
+
+            <TextView
+                android:textColor="#777"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="80dp"
+                android:text="x10000"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ProgressBar
+                android:id="@+id/progressBark"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_horizontal" />
+
+            <TextView
+                android:textColor="#777"
+                android:id="@+id/count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+
+                android:textSize="25dp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="80dp"
+                android:text="x100"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/w1"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/data_fsstep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="110dp"
+                android:text="Walk Step"
+                android:textSize="40dp" />
+
+            <TextView
+                android:textColor="#777"
+                android:id="@+id/count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/data_fsstep"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="20dp"
+
+                android:textSize="35dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
